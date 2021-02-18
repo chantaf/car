@@ -1,0 +1,229 @@
+#active{
+	color:#c5a775;
+}
+
+.navlogo{
+	height: 100px;
+	margin-left: 50px;
+
+}
+
+.main-menu a{
+	padding: 30px;	
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	font-family: Montserrat;
+	position :relative;
+	left:550px;
+	bottom: 40px;
+}
+
+ 
+
+.header-nav{
+	background: black;
+	border-bottom:1px solid #c5a775 ; 
+	height: 110px;
+	margin: 0;
+	padding: 0;
+	
+}
+
+.main-menu a:hover{
+	color:#FFF2C5;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #1a1a1a;
+}
+
+#sn{
+	 color: #c5a775 ;
+	 font-size: 20px;
+}
+
+.ff{
+	margin: 20px;
+	background: black; 
+
+
+}
+
+.ff img{
+	margin: 10px;
+	opacity: 0.5;
+}
+
+.ff img:hover{
+	opacity: 1;
+	background-color: #c5a775;
+	border-radius: 50%;
+}
+
+.fc{
+	display: flex;
+}
+#cr{
+	 color: #c5a775 ;
+	 font-size: 20px;
+	 text-align: right;
+	 margin-left: 680px;
+}
+
+/*******************************************************************************************/
+
+
+.res{
+	background: #c5a775 ;
+	height: 600px;
+}
+
+#tit {
+	color :white;
+	text-align: center;
+	font-weight: bold;
+	font-family: Montserrat;
+	padding-top: 20px;
+}
+
+#stit{
+	color :white;
+	text-align: center;
+	font-family: Montserrat;
+	font-weight: 100;
+}
+
+
+.choix{
+	display: flex;
+	height: 100px;
+	cursor: pointer;
+
+}
+
+
+.choix img{
+	padding-left: 17px;
+
+}
+
+form{
+	font-family: Montserrat;
+	color: white;
+	padding: 10px;
+}
+
+
+
+form{
+   	position: relative;
+	left: 200px;
+
+}
+
+#btnval{
+	color: white;
+	width: 200px;
+	height: 40px;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: bold;
+	position: relative;
+	left: 200px;
+	bottom: 20px;
+	text-align: center;
+	margin-top: 20px;
+	background:#1a1a1a;
+	border-radius: 5px;
+	border: none;
+
+}
+
+table tr  td{
+	padding-top: 15px;
+}
+
+#btnval:hover{
+	background:red;
+}
+
+.dateedep , .dateret{
+	color: white;
+	border: 1px solid black;
+	border-radius: 5px;
+	background: #c5a775;
+	font-size: 15px;
+	padding: 5px;
+}
+
+
+
+
+#errure1,#errure2,#errure3{
+	color:red;
+	position: relative;
+	left:255px;
+	width: 50%;
+	height: 80px;
+
+}
+#erreurty{
+color: red;
+position:relative;
+left:595px;
+font-family: Montserrat;
+font-size: 15px;
+font-style: bold;
+}
+
+.formm{
+    position: relative;
+	left:130px;
+	width: 800px;
+}
+
+
+#env{
+	background:#D2BC96;
+	width: 55%;
+	height: 345px;
+	padding: 10px;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: bold;
+	position: relative;
+	left: 290px;
+	bottom: 270px;
+	display: none;
+	color:white;
+	text-align: center;
+}
+
+
+#btfr{
+	color:white;
+	width: 300px;
+	height: 40px;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: bold;
+	position: relative;
+	left:2%;
+	top:250px;
+	bottom: 20px;
+	text-align: center;
+	margin-top: 20px;
+	background:#836F4E;
+	border-radius: 5px;
+	border: none;
+	text-decoration: none;
+}
+
+
+
+#btfr:hover{
+	background:red;
+}

@@ -1,0 +1,267 @@
+#active{
+	color:#c5a775;
+}
+
+.navlogo{
+	height: 100px;
+	margin-left: 50px;
+
+}
+
+.main-menu a{
+	padding: 30px;	
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	font-family: Montserrat;
+	position :relative;
+	left:550px;
+	bottom: 40px;
+}
+
+ 
+
+.header-nav{
+	background: black;
+	border-bottom:1px solid #c5a775 ; 
+	height: 110px;
+	margin: 0;
+	padding: 0;
+	
+}
+
+.main-menu a:hover{
+	color:#FFF2C5;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #1a1a1a;
+}
+
+
+#sn{
+	 color: #c5a775 ;
+	 font-size: 20px;
+}
+
+.ff{
+	margin: 20px;
+	background: black;
+
+}
+
+.ff img{
+	margin: 10px;
+	opacity: 0.5;
+}
+
+.ff img:hover{
+	opacity: 1;
+	background-color: #c5a775;
+	border-radius: 50%;
+}
+
+.fc{
+	display: flex;
+}
+
+#cr{
+	 color: #c5a775 ;
+	 font-size: 20px;
+	 text-align: right;
+	position:relative;
+	left:600px;
+}
+
+
+.dv1{
+
+	display: flex;
+	margin-top: 70px;
+
+}
+
+
+.dv1 img{
+
+	width: 25%;
+}
+
+
+
+.dv2 img{
+
+	width: 50%;
+	margin-left: 25%;
+	margin-top: 70px;
+}
+
+
+.dv3{
+
+	display: flex;
+	margin-top: 70px;
+
+}
+
+
+.dv3 img{
+
+	width: 25%;
+}
+
+.t1{
+	color: #c5a775 ;
+	 font-size: 40px;
+	 text-align: center;
+	 margin-top: 30px;
+	 font-family: Montserrat;
+}
+
+
+.dv4{
+
+	display: flex;
+	margin-top: 70px;
+
+}
+
+
+.dv4 img{
+
+	width: 25%;
+}
+
+
+
+.b22{
+	background: red;
+	width: 300px;
+	height: 40px;
+	font-family: Montserrat;
+	font-size: 15px;
+	font-style: bold;
+	position: relative;
+	left :490px;
+	bottom: 20px;
+	text-align: center;
+	padding-top: 20px;
+	margin-top: 80px;
+
+}
+
+.b22 a{
+	text-decoration: none;
+	color: white;
+    font-style: bold;
+   font-family: Montserrat;
+
+}
+
+.b22:hover{
+	background:#c5a775;
+}
+
+.icon{
+
+	display: none;
+}
+
+.n1menu{
+	display: none;
+}
+@media screen and (max-width: 800px) {
+.main-menu {
+	display:none;
+}
+
+.b22{
+	background: red;
+	width: 300px;
+	height: 40px;
+	font-family: Montserrat;
+	font-size: 15px;
+	font-style: bold;
+	position: relative;
+	left :250px;
+	top:10px;
+	bottom: 10px;
+	text-align: center;
+	padding-top: 20px;
+
+}
+
+
+
+..ff{
+	font-size: 20px;
+	
+}
+
+
+.fc{
+	height: 60px;
+}
+
+#cr{
+	 color: #c5a775 ;
+	 font-size: 16px;
+	 position: relative;
+	 left:230px;
+	 top:20px;
+
+	 
+}
+
+ #h{
+    color: #c5a775 ;
+ 	margin-left: 10px;
+ 	margin-top: 20px;
+ 	font-family: Montserrat;
+ }
+
+ .navlogo{
+	height: 100px;
+	position: relative;
+	right:  29px;
+
+}
+
+.icon{
+
+	background:white;
+	height: 50px;
+	position: relative;
+	left:90%;
+	bottom: 130%;
+	display: block;
+	cursor: pointer;
+
+}
+
+   .jj{
+		
+		display: grid;
+	}
+
+.n1menu{
+
+     background: #c5a775;
+	display: none;
+	text-align: center;
+
+ }
+
+#idmenu a{
+
+	display: grid;
+	text-decoration: none;
+	font-family: Montserrat;
+	font-style: bold;
+	font-size: 15px;
+	color:white;
+	padding: 20px;
+
+ }

@@ -1,0 +1,194 @@
+#active{
+	color:#c5a775;
+}
+
+.navlogo{
+	height: 100px;
+	margin-left: 50px;
+
+}
+
+.main-menu a{
+	padding: 30px;	
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	font-family: Montserrat;
+	position :relative;
+	left:550px;
+	bottom: 40px;
+}
+
+ 
+
+.header-nav{
+	background: black;
+	border-bottom:1px solid #c5a775 ; 
+	height: 110px;
+	margin: 0;
+	padding: 0;
+	
+}
+
+.main-menu a:hover{
+	color:#FFF2C5;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #1a1a1a;
+	background-image: url(http://www.luxerentalcar.ma/wp-content/uploads/2016/08/footer.jpg);
+}
+
+#sn{
+	 color: #c5a775 ;
+	 font-size: 20px;
+}
+
+.ff{
+	margin: 20px;
+	background: black;
+
+}
+
+.ff img{
+	margin: 10px;
+	opacity: 0.5;
+}
+
+.ff img:hover{
+	opacity: 1;
+	background-color: #c5a775;
+	border-radius: 50%;
+}
+
+.fc{
+	display: flex;
+}
+#cr{
+	 color: #c5a775 ;
+	 font-size: 20px;
+	 text-align: right;
+	 margin-left: 680px;
+}
+
+/*******************************************************************************************/
+
+.ti1{
+
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	font-family: Montserrat;
+	font-size: 15px;
+
+}
+
+
+
+.formm{
+    position: relative;
+	left:340px;
+	width: 800px;
+}
+
+
+
+#su,#nom,#em{
+	font-size: 18px;
+	padding: 5px;
+	padding-left: 10px;
+	font-family: Montserrat;
+	width: 590px;
+	border-radius: 5px;
+	border: none;
+}
+
+#me{
+	font-size: 18px;
+	padding: 5px;
+	padding-left: 10px;
+	font-family: Montserrat;
+	width: 588px;
+	border-radius: 5px;
+}
+
+#bt{
+	color: white;
+	width: 200px;
+	height: 40px;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: bold;
+	position: relative;
+	left :190px;
+	bottom: 20px;
+	text-align: center;
+	margin-top: 20px;
+	background:#c5a775;
+	border-radius: 5px;
+	border: none;
+
+}
+
+
+#bt:hover{
+	background:red;
+}
+
+#hi{
+		color:#c5a775;
+}
+
+#errure1,#errure3,#errure4,#errure2{
+	color:red;
+	width: 50%;
+	height: 80px;
+	position: relative;
+	left:20px;
+	font-family: Montserrat;
+	font-style: bold;
+}
+
+
+#env{
+	background:#c5a775;
+	width: 47%;
+	height: 250px;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: bold;
+	position: relative;
+	left: 349px;
+	bottom: 270px;
+	display: none;
+	color:white;
+	text-align: center;
+}
+
+
+#btfr{
+	color: white;
+	width: 200px;
+	height: 40px;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: bold;
+	position: relative;
+	left:2%;
+	top:170px;
+	bottom: 20px;
+	text-align: center;
+	margin-top: 20px;
+	background:black;
+	border-radius: 5px;
+	border: none;
+	text-decoration: none;
+}
+
+
+
+#btfr:hover{
+	background:red;
+}

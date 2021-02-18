@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Réservation</title>
+	<meta charset="utf-8">
+	<link href="reservation.css" rel="stylesheet">
+
+<script type="text/javascript">
+			var vehicule=[
+								{type:"moto",prix:"100"},
+								{type:"citadin",prix:"120"},
+								{type:"compact",prix:"140"},
+								{type:"berline",prix:"200"},
+								{type:"unilitaire",prix:"160"},
+								{type:"egin de chanttier",prix:"9000"},
+								{type:"camion",prix:"2500"}
+								
+						 ];
+	
+			var type={
+				"moto":["essence","electrique"],
+				"citadin":["manuelle","diesel","hybride","essence","electrique"],
+				"compact":["manuelle","diesel","hybride","essence"],
+				"berline":["diesel","hybride","essence","automatique"],
+				"unilitaire":["manuelle","diesel"],
+				"egin de chanttier":["manuelle","diesel","essence"],
+				"camion":["diesel","automatique"]
+			}		
+	       	
+			var dd;
+     		function test(id)
+     		{
+     			
+     			var a=document.getElementsByClassName("imgType");
+     			for(var i=0;i<a.length;i++){
+
+     				a[i].style.border="none";
+     			}
+     			document.getElementById(id).style.border="3px solid red";
+
+     			var carbu=document.getElementsByName("carbu");
+     			for(var i=0;i<carbu.length;i++){
+
+     				carbu[i].disabled = true;
+     			}
+                var boite=document.getElementsByName("boite");
+     			for(var i=0;i<boite.length;i++){
+
+     				boite[i].disabled = true;
+     			}
+     			for(var i=0;i<type[id].length;i++){
+ 
+					document.getElementById(type[id][i]).disabled = false;
+     			}
+     		      dd= id;
+     		}
+			
+     			
+		function reserver(){
+
+		var carbu=document.getElementsByName("carbu");
+		var vite=document.getElementsByName("boite");
+		var dated=document.getElementById("dateedep");
+		var datef=document.getElementById("dateret");
+		var t=0;
+
+		if(dd!="moto" && dd!="citadin" && dd!="compact" && dd!="unilitaire" && dd!="berline" && dd!="camion" && dd!="egin de chanttier" ){
+			document.getElementById("erreurty").innerText="le type de vehivule obligatoire";
+					t=1;
+		}
+
+		
+		if(dd=="moto"){
+			if(!carbu[0].checked && !carbu[2].checked)
+				{ 	    
+
+				document.getElementById("errure1").innerText="le champs Carburant obligatoire";
+					t=1;
+				}
+			
+		  if(dated.value=="" || datef.value=="")
+				{ 	    
+
+				document.getElementById("errure3").innerText="la duree obligatoire";
+				t=1;
+				}
+			}else {
+			if(!carbu[0].checked && !carbu[1].checked && !carbu[2].checked && !carbu[3].checked)
+				{ 	    
+
+				document.getElementById("errure1").innerText="le champs Carburant obligatoire";
+				t=1;
+				}
+
+			if(!(vite[0].checked) && !(vite[1].checked))
+				{ 	    
+			     
+				document.getElementById("errure2").innerText="le champs boite vitesse obligatoire";
+				t=1;
+
+				}
+			if(dated.value=="" || datef.value=="")
+				{ 	    
+
+				document.getElementById("errure3").innerText="la duree obligatoire";
+				t=1;
+				}
+		}
+           var prix ;
+           var prix_total,prcarbu=0,prboite=0;
+           var noboit;
+           var nocarbu;
+           var date1 = new Date(dated.value); 
+			var date2 = new Date(datef.value); 
+			var Diff_temps = date2.getTime() - date1.getTime(); 
+			var Diff_jours = Diff_temps / (1000 * 3600 * 24)+1; 
+
+			if(Diff_jours <0){
+				document.getElementById("errure3").innerText="la duree incorecte";
+				t=1;
+			}
+
+			
+		if(t==0){
+				for(var i=0;i<vehicule.length;i++){
+					if(vehicule[i].type==dd){
+						vehicule[i].type[dd]
+						prix =vehicule[i].prix;
+					}
+					
+				}
+
+				
+			
+				
+		if(dd=="moto" && carbu[0].checked )	{
+			prcarbu=0.14;
+			noboit="";
+			nocarbu="essence";
+			
+		}else if(dd=="moto" && carbu[2].checked ) {
+			prcarbu=0.05;
+			nocarbu="electrique";
+			noboit="";
+		}
+
+
+		if(dd=="citadin" && carbu[0].checked ){
+			prcarbu=0.14;
+			noboit="manuelle";
+			nocarbu="essence";
+		}else if (dd=="citadin" && carbu[1].checked){
+			prcarbu=0.21;
+			nocarbu="Diesel";
+			noboit="manuelle";
+		}else if (dd=="citadin" && carbu[3].checked){
+			prcarbu=0.09;
+			nocarbu="Hybride";
+			noboit="manuelle";
+		}	   
+		
+		if(dd=="compact" && carbu[0].checked ){
+			prcarbu=0.14;
+			noboit="manuelle";
+			nocarbu="essence";
+		}else if (dd=="compact" && carbu[1].checked){
+			prcarbu=0.21;
+			nocarbu="Diesel";
+			noboit="manuelle";
+		}else if (dd=="compact" && carbu[2].checked){
+			prcarbu=0.05;
+			nocarbu="electrique";
+			noboit="manuelle";
+		}else if (dd=="compact" && carbu[3].checked){
+			prcarbu=0.09;
+			nocarbu="Hybride";
+			noboit="manuelle";
+		}		
+
+		if(dd=="unilitaire"){
+			prcarbu=0.21;
+		    noboit="manuelle";
+		    nocarbu="Diesel";
+		}
+
+ 		if(dd=="berline" && carbu[0].checked ){
+ 			prboite=0.19;
+			prcarbu=0.14;
+			nocarbu="essence";
+			noboit="automatique";
+		}else if (dd=="berline" && carbu[1].checked){
+			prboite=0.19;
+			prcarbu=0.21;
+			nocarbu="Diesel";
+			noboit="automatique";
+		}else if (dd=="berline" && carbu[3].checked){
+			prboite=0.19;
+			prcarbu=0.09;
+			nocarbu="Hybride";
+			noboit="automatique";
+		}
+
+
+		if(dd=="camion"){
+			prboite=0.19;
+			prcarbu=0.21;
+			noboit="automatique";
+			nocarbu="Diesel";
+		}
+
+
+		if(dd=="egin de chanttier" && carbu[0].checked){
+			prcarbu=0.14;	
+			noboit="manuelle";	
+			nocarbu="essence";	
+		}else if(dd=="egin de chanttier" && carbu[1].checked){
+			prcarbu=0.21;
+			nocarbu="Diesel";
+			noboit="manuelle";
+		}
+			
+		prix_total=(parseFloat(prix)+parseFloat(prcarbu)+parseFloat(prboite))*parseInt(Diff_jours);
+	 
+	   document.getElementById('env').innerHTML+="</br>"+"BONJOUR"+"</br>"+" type de vehicule : " +dd+"</br>"+"Carburant :"+nocarbu+"</br>"+"Boite à Vitesse :"+noboit+"</br>"+"Durée de Réservation :"+Diff_jours+ " jour" +"</br>"+"prix par jour:"+prix+"</br>"+"prix total :" +prix_total+"</br>"+"confirmer reservation";
+	    document.getElementById('env').style.display="block";
+}
+		
+  }
+
+	function confirmer(){
+        document.getElementById('env').style.display="none";
+        var carbu=document.getElementsByName("carbu");
+		var vite=document.getElementsByName("boite");
+		
+
+		for(var i=0;i<carbu.length;i++){
+			carbu[i].disabled = false;
+		}
+
+		for(var i=0;i<vite.length;i++){
+			vite[i].disabled = false;
+		}
+		document.getElementById(dd).style.border="none";
+		document.getElementById('essence').checked=true;
+		document.getElementById('manuelle').checked=true;
+		document.getElementById("dateedep").value=new Date();
+		document.getElementById("dateret").value=new Date();
+
+	}	
+	
+
+</script>
+</head>
+<body >
+<header >
+	
+
+
+<div class="header-nav">
+                   <a href="accueil.html"><img src="image/logo1.jpg" alt="#" class="navlogo"></a>  
+                  
+                          <nav class="main-menu">
+                                 <a href="accueil.html" >Accueil</a> 
+                                 <a href="gallerie.html">Gallerie</a> </li>
+                                 <a href="reservation.html" id="active">Réservation</a></li>
+                                 <a href="contact.html">Contact Nous</a></li>
+                            
+                           </nav> 
+                         
+</div>
+</header>
+<div class="res">
+	<h1 id="tit">RÉSERVATION EN LIGNE !!!</h1>
+	<h3 id="stit">CH CAR TOUJOURS PLUS PRÈS DE VOUS ..</h3>
+
+
+
+<div class="choix">
+	
+	                   <img src="image/c1.png"  id="moto" onclick="test('moto')" class="imgType">
+                        <img src="image/compact.png"   onclick="test('compact')" id="compact"   class="imgType">
+                        <img src="image/citadin.png"  class="imgType" onclick="test('citadin')" id="citadin">
+                        <img src="image/f1.png"  class="imgType" onclick="test('unilitaire')" id="unilitaire">
+                        <img src="image/sedan.png" class="imgType" onclick="test('berline')" id="berline">
+                        <img src="image/e3.png"  class="imgType" onclick="test('camion')" id="camion">
+                        <img src="image/f112.png"  class="imgType" onclick="test('egin de chanttier')" id="egin de chanttier">
+   
+</div>
+<div id="erreurty"></div>
+<div class="formm">
+<form>
+	<table>
+		<tr>
+			
+				<td>Carburant :</td><td>  Essence <input type="radio" name="carbu" id="essence" >
+							 Diesel <input type="radio" name="carbu" id="diesel" >
+							 Electrique <input type="radio" name="carbu" id="electrique">
+							 Hybride <input type="radio" name="carbu" id="hybride"></td>
+			
+		
+		</tr>
+		<tr>
+				<td><span id="errure1"></span> </td>
+							      
+		</tr>
+
+		<tr>
+			
+				<td>Boite à Vitesse: </td><td>  Manuelle <input type="radio" name="boite" id="manuelle"  >
+							       Automatique <input type="radio" name="boite" id="automatique"></td>
+							      
+							 
+			
+		</tr>
+	     <tr>
+				<td><span id="errure2"></span> </td>
+							      
+		</tr>
+		<tr>
+		
+				<td>Durée de Réservation:</td>
+				<td>
+					Du <input type="date" name="datedep" class="dateedep" id="dateedep" values="Date départ">
+					 Au <input type="date" name="datedep" class ="dateret"  id="dateret" values="Date retour" >
+				</td>
+							 
+		
+			
+		</tr>
+         <tr>
+				<td><span id="errure3"></span> </td>
+							      
+		</tr>
+		
+				
+		<tr>
+
+			<td>
+
+				<input type="button" name="btnval" id="btnval" onclick="reserver()" value="Réservation">			 
+			</td>
+		</tr>
+        
+	</table>
+	
+</form>
+</div>
+<div id="env"> <button id="btfr" onclick="confirmer()">confirmer reservation</button></div>
+<footer class="ff">
+	<p id="sn">Suivez-nous</p> 
+	<div class="fc">
+						<img src="icon/facebook.png">
+                        <img src="icon/Twitter.png">
+                        <img src="icon/linkedin.png">
+                        <img src="icon/instagram.png">
+     <p id="cr">Copyright © 2018 - 2021 CH CAR </p>
+  </div>
+</footer>
+</body>
+</html>

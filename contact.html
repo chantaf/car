@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Nous</title>
+	<meta charset="utf-8">
+	<link href="contact.css" rel="stylesheet">
+
+  <script type="text/javascript">
+
+          
+    function valider(){
+            var nom=document.getElementById('nom');
+           var email=document.getElementById('em');
+           var sujet=document.getElementById('su');
+           var msg=document.getElementById('me');
+           var pnom=/^[A-Za-z]{3,}/;
+           var pemail=/^[a-z0-9._-]+[a-z0-9]+\@[a-z]+\.[a-z]{2,3}$/;
+           var psujet=/^[\w\s\S\r\t]{10,25}/;
+           var pmsg=/^[\w\s\S\r\t]{100,}/;
+
+                      if(nom.value=="")
+                     {
+                           document.getElementById('errure1').innerText="Le NOM obligatoire (*)" ; 
+                           nom.style.border="2px solid red";
+                     }else if (pnom.test(nom.value)==false)
+                     {
+                            document.getElementById('errure1').innerText="Le NOM contien sauf les lettres et au mois 3 lettre";
+                            nom.style.border="2px solid red"; 
+                     }else{
+                           var t1=0;
+                            document.getElementById('errure1').innerText="";
+                            nom.style.border="none";
+                     }
+
+
+
+
+                      if(email.value=="")
+                     {
+                           document.getElementById('errure2').innerText="EMAIL obligatoire (*)" ; 
+                            email.style.border="2px solid red";
+                     }else if (!(pemail.test(email.value)))
+                     {
+                            document.getElementById('errure2').innerText="entrer email sous form nom.prenom@mail.com"; 
+                           email.style.border="2px solid red";
+                     }else{
+                      var t2=0;
+                      document.getElementById('errure2').innerText="";
+                       email.style.border="none";
+                     
+                     }
+
+
+
+
+                      if(sujet.value=="")
+                     {
+                           document.getElementById('errure3').innerText="SUJET obligatoire (*)"; 
+                            sujet.style.border="2px solid red";
+                     }else if (!(psujet.test(sujet.value)))
+                     {
+                            document.getElementById('errure3').innerText="entrer le sujet  contien au mois 10 caracter et au plus 25 caracter et contien sauf les lettres"; 
+                             sujet.style.border="2px solid red";
+                            
+                     }else{
+                      var t3=0;
+                      document.getElementById('errure3').innerText="";
+                      sujet.style.border="none";
+                     }
+
+                     if (pmsg.test(msg.value)==false)
+                     {
+                            document.getElementById('errure4').innerText="Le message contien  au mois 100 caracter";
+                            msg.style.border="2px solid red"; 
+                     }else{
+                           var t4=0;
+                            document.getElementById('errure4').innerText="";
+                            msg.style.border="none";
+                     }
+
+                     if(t1==0 && t2==0 && t3==0 && t4==0){
+                            document.getElementById('env').style.display="block";
+                            document.getElementById('errure1').style.display="none";
+                            document.getElementById('errure2').style.display="none";
+                            document.getElementById('errure3').style.display="none";
+                            document.getElementById('env').innerHTML+="</br>"+"BONJOUR : " +nom.value+"</br>"+"email : " +email.value +"</br>"+ "Sujet :"+sujet.value+"</br>"+"Message envoyer";
+                     }
+
+
+
+}
+
+function fermer(){
+   document.getElementById('env').style.display="none";
+   document.getElementById('nom').value="";
+   document.getElementById('em').value="";
+   document.getElementById('su').value="";
+   document.getElementById('me').value="";
+
+  }
+  </script>
+
+</head>
+<body>
+<header >
+	
+
+
+<div class="header-nav">
+                   <a href="accueil.html"><img src="image/logo1.jpg" alt="#" class="navlogo"></a>  
+                  
+                          <nav class="main-menu">
+                                 <a href="accueil.html" >Accueil</a> 
+                                 <a href="gallerie.html">Gallerie</a> </li>
+                                 <a href="reservation.html" >Réservation</a></li>
+                                 <a href="contact.html" id="active">Contact Nous</a></li>
+                            
+                           </nav> 
+                         
+</div>
+</header>
+
+<div class="ti1">
+  <h1 id="hi">CONTACTEZ NOUS</h1>
+</div>
+
+<div class="ti1">
+  <h4>Vous avez des questions ou besoin d'informations supplémentaires?</h4>
+</div>
+
+<div class="ti1">
+  <h5>Addresse : Rue Charif al Idrissi SAFI.</h5>
+</div>
+
+<div class="ti1">
+  <h1>+212 6 63 69 63 69</h1>
+</div>
+<div class="formm">
+<form>
+  <table>
+    <tr>
+      <td><input type="text" id="nom" name="nom" placeholder="Nom *">
+     </td>
+     <tr>
+       <td><span id="errure1"></span> </td>
+     </tr>
+    </tr>
+    <tr>
+      <td> <input type="email" id="em" name="em" placeholder="Email *"></td>
+    </tr>
+      <tr>
+        <td><span id="errure2"></span></td>           
+      </tr>
+      
+     <tr>
+      <td><input type="text" id="su" name="su" placeholder="Sujet *"></td>
+    </tr>
+      <tr>
+        <td><span id="errure3"></span> </td>        
+     </tr>
+     <tr>
+      <td><textarea rows="4" cols="80" placeholder="Message" id="me" name="me"></textarea>  
+    </tr>
+     <tr>
+        <td><span id="errure4"></span></td>        
+     </tr>
+     <tr>
+      <td><input type="button" onclick="valider()" value="envoyer" id="bt"></td>
+    </tr>
+  </table>
+</form>
+</div>
+<div id="env"> <button id="btfr" onclick="fermer()">Fermer</button></div>
+<footer class="ff">
+	<p id="sn">Suivez-nous</p> 
+	<div class="fc">
+						<img src="icon/facebook.png">
+                        <img src="icon/Twitter.png">
+                        <img src="icon/linkedin.png">
+                        <img src="icon/instagram.png">
+     <p id="cr">Copyright © 2018 - 2021 CH CAR </p>
+  </div>
+</footer>
+</body>
+</html>
