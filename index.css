@@ -180,7 +180,9 @@ color: #A8A8A8;
 
 	display: none;
 }
-
+.n1menu{
+	display: none;
+}
 @media screen and (max-width: 800px) {
 .total1{
 	display: grid;
@@ -304,7 +306,28 @@ body{
 
  }
 
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

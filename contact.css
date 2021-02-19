@@ -70,9 +70,18 @@ body{
 	 color: #c5a775 ;
 	 font-size: 20px;
 	 text-align: right;
-	 margin-left: 680px;
+	position:relative;
+	left:600px;
 }
 
+.icon{
+
+	display: none;
+}
+
+.n1menu{
+	display: none;
+}
 /*******************************************************************************************/
 
 .ti1{
@@ -191,4 +200,137 @@ body{
 
 #btfr:hover{
 	background:red;
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+
+.main-menu {
+	display:none;
+}
+
+
+#titre{
+	color: white;
+	font-style: bold;
+	font-size: 60px;
+	text-align: center;
+	margin-top: 60px;
+	font-family: Montserrat;
+}
+
+
+
+
+
+body{
+	text-align: center;
+	overflow-x: hidden;
+}
+
+
+.ff{
+	font-size: 20px;
+	
+}
+
+
+.fc{
+	height: 60px;
+}
+
+#cr{
+	 color: #c5a775 ;
+	 font-size: 16px;
+	 position: relative;
+	 left:230px;
+	 top:20px;
+
+	 
+}
+
+
+ #h{
+    color: #c5a775 ;
+ 	margin-left: 10px;
+ 	margin-top: 20px;
+ 	font-family: Montserrat;
+ }
+
+ .navlogo{
+	height: 100px;
+	position: relative;
+	right:  250px;
+}
+
+.icon{
+
+	background:white;
+	height: 50px;
+	position: relative;
+	left:90%;
+	bottom: 130%;
+	display: block;
+	cursor: pointer;
+
+}
+
+   .jj{
+		
+		display: grid;
+	}
+
+.n1menu{
+
+     background: #c5a775;
+	display: none;
+
+ }
+
+#idmenu a{
+
+	display: grid;
+	text-decoration: none;
+	font-family: Montserrat;
+	font-style: bold;
+	font-size: 15px;
+	color:white;
+	padding: 20px;
+
+ }
+
+
+.formm{
+    position: relative;
+	left:80px;
+	width: 800px;
+}
+
+
+#bt{
+	
+	position: relative;
+	left :20px;
+	bottom: 20px;
+	
+
+}
+
+#env{
+	background:#c5a775;
+	width: 47%;
+	height: 250px;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: bold;
+	position: relative;
+	left: 209px;
+	bottom: 270px;
+	display: none;
+	color:white;
+	text-align: center;
+}
+
 }

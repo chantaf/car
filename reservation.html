@@ -4,8 +4,22 @@
 	<title>Réservation</title>
 	<meta charset="utf-8">
 	<link href="reservation.css" rel="stylesheet">
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta
+		name="description"           
+		content="cette page contient la page reservation">
 <script type="text/javascript">
+	     function m(){
+
+  var a = document.getElementById('ll');
+
+  if(a.style.display=="block"){
+    a.style.display="none";
+  }else{
+    a.style.display="block";
+  }
+}
+
 			var vehicule=[
 								{type:"moto",prix:"100"},
 								{type:"citadin",prix:"120"},
@@ -240,6 +254,10 @@
 		for(var i=0;i<vite.length;i++){
 			vite[i].disabled = false;
 		}
+		document.getElementById("errure1").innerText="";
+		document.getElementById("errure2").innerText="";
+		document.getElementById("errure3").innerText="";
+		document.getElementById("erreurty").innerText="";
 		document.getElementById(dd).style.border="none";
 		document.getElementById('essence').checked=true;
 		document.getElementById('manuelle').checked=true;
@@ -257,10 +275,13 @@
 
 
 <div class="header-nav">
-                   <a href="accueil.html"><img src="image/logo1.jpg" alt="#" class="navlogo"></a>  
+                   <div class="jj"> 
+                  <a href="index.html"><img src="image/logo1.jpg" alt="#" class="navlogo"></a>  
+                  <img src="image/menu-icon.png" id="mmaa" onclick="m()" class="icon" alt="#" >
+                  </div>
                   
                           <nav class="main-menu">
-                                 <a href="accueil.html" >Accueil</a> 
+                                 <a href="index.html" >Accueil</a> 
                                  <a href="gallerie.html">Gallerie</a> </li>
                                  <a href="reservation.html" id="active">Réservation</a></li>
                                  <a href="contact.html">Contact Nous</a></li>
@@ -269,6 +290,17 @@
                          
 </div>
 </header>
+<div class="n1menu" id="ll">
+  
+   <div  id="idmenu">
+                                 <a href="index.html" >Accueil</a> 
+                                 <a href="gallerie.html">Gallerie</a> </li>
+                                 <a href="reservation.html">Réservation</a></li>
+                                 <a href="contact.html">Contact Nous</a></li>
+                            
+      </div> 
+
+</div>
 <div class="res">
 	<h1 id="tit">RÉSERVATION EN LIGNE !!!</h1>
 	<h3 id="stit">CH CAR TOUJOURS PLUS PRÈS DE VOUS ..</h3>
@@ -277,13 +309,13 @@
 
 <div class="choix">
 	
-	                   <img src="image/c1.png"  id="moto" onclick="test('moto')" class="imgType">
-                        <img src="image/compact.png"   onclick="test('compact')" id="compact"   class="imgType">
-                        <img src="image/citadin.png"  class="imgType" onclick="test('citadin')" id="citadin">
-                        <img src="image/f1.png"  class="imgType" onclick="test('unilitaire')" id="unilitaire">
-                        <img src="image/sedan.png" class="imgType" onclick="test('berline')" id="berline">
-                        <img src="image/e3.png"  class="imgType" onclick="test('camion')" id="camion">
-                        <img src="image/f112.png"  class="imgType" onclick="test('egin de chanttier')" id="egin de chanttier">
+	                   <img src="image/c1.png" alt="#" id="moto" onclick="test('moto')" class="imgType">
+                        <img src="image/compact.png"  alt="#" onclick="test('compact')" id="compact"   class="imgType">
+                        <img src="image/citadin.png" alt="#" class="imgType" onclick="test('citadin')" id="citadin">
+                        <img src="image/f1.png" alt="#" class="imgType" onclick="test('unilitaire')" id="unilitaire">
+                        <img src="image/sedan.png" alt="#" class="imgType" onclick="test('berline')" id="berline">
+                        <img src="image/e3.png" alt="#"  class="imgType" onclick="test('camion')" id="camion">
+                        <img src="image/f112.png" alt="#"  class="imgType" onclick="test('egin de chanttier')" id="egin de chanttier">
    
 </div>
 <div id="erreurty"></div>
@@ -349,10 +381,10 @@
 <footer class="ff">
 	<p id="sn">Suivez-nous</p> 
 	<div class="fc">
-						<img src="icon/facebook.png">
-                        <img src="icon/Twitter.png">
-                        <img src="icon/linkedin.png">
-                        <img src="icon/instagram.png">
+						<img src="icon/facebook.png" alt="#">
+                        <img src="icon/Twitter.png" alt="#">
+                        <img src="icon/linkedin.png" alt="#">
+                        <img src="icon/instagram.png" alt="#">
      <p id="cr">Copyright © 2018 - 2021 CH CAR </p>
   </div>
 </footer>
